@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appcolor">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:weightSum="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/layout_Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.8"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:paddingLeft="30dp"
+                android:text="Digital Compass"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <ImageView
+                    android:id="@+id/shareImg"
+                    android:layout_width="106px"
+                    android:layout_height="106px"
+                    android:layout_gravity="center"
+                    android:src="@drawable/c_digital_share_unpress" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layAddressHolder"
+            android:layout_width="1076px"
+            android:layout_height="104px"
+            android:layout_marginTop="40px"
+            android:layout_marginBottom="20px"
+            android:layout_weight="1"
+            android:background="@drawable/c_digital_text_bg"
+            android:backgroundTint="#8F3F60B5"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ic_location"
+                android:layout_width="200px"
+                android:layout_height="50px"
+                android:layout_gravity="center"
+                android:src="@drawable/c_digital_ic_location" />
+
+            <TextView
+                android:id="@+id/addressHolder"
+                android:layout_width="937px"
+                android:layout_height="79px"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.5"
+                android:gravity="center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/project__green_color"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="@color/white"
+                    android:text="Speed" />
+
+                <TextView
+                    android:id="@+id/speedTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    tools:text="1m/s" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Altitude" />
+
+                <TextView
+                    android:id="@+id/altitudeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    tools:text="Me" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Distance" />
+
+                <TextView
+                    android:id="@+id/distanceToMTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    tools:text="Me" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layMiddle"
+            android:layout_width="match_parent"
+            android:layout_height="220px"
+            android:layout_gravity="center"
+            android:layout_marginTop="20px"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_latDisplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="Latitude"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/latHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/poppins_light"
+                    android:gravity="center_horizontal"
+                    android:text="Lat"
+                    android:textColor="@color/project__blue_color"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="@+id/txt_latDisplay"
+                    app:layout_constraintRight_toRightOf="@+id/txt_latDisplay"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_latDisplay" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/degreeDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="360 \n something"
+                android:textColor="@color/project__blue_color"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_lngDisplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Longitude"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/lngHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/poppins_light"
+                    android:gravity="center_horizontal"
+                    android:text="Lng"
+                    android:textColor="@color/project__blue_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="@+id/txt_lngDisplay"
+                    app:layout_constraintRight_toRightOf="@+id/txt_lngDisplay"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_lngDisplay" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Laycompass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <ImageView
+                android:id="@+id/compassImg"
+                android:layout_width="1080px"
+                android:layout_height="1080px"
+                android:src="@drawable/c_digital_diameter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_stable_cmt"
+                android:layout_width="1080px"
+                android:layout_height="1080px"
+                android:src="@drawable/c_digital_stable_component"
+                app:layout_constraintBottom_toBottomOf="@+id/compassImg"
+                app:layout_constraintLeft_toLeftOf="@+id/compassImg"
+                app:layout_constraintRight_toRightOf="@+id/compassImg"
+                app:layout_constraintTop_toTopOf="@+id/compassImg" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2"
+        map:layout_constraintEnd_toEndOf="@+id/constraint2"
+        map:layout_constraintStart_toStartOf="@+id/constraint2"
+        map:layout_constraintTop_toTopOf="@+id/constraint2">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map1"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint2"
+        android:layout_width="0dp"
+        android:layout_height="397px"
+        android:background="@color/main_bg"
+        android:backgroundTint="@color/appcolor"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            map:layout_constraintLeft_toLeftOf="parent"
+            map:layout_constraintRight_toRightOf="parent"
+            map:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.8"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:paddingLeft="30dp"
+                android:text="Digital Compass"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <ImageView
+                    android:id="@+id/share"
+                    android:layout_width="106px"
+                    android:layout_height="106px"
+                    android:layout_gravity="center"
+                    android:src="@drawable/c_digital_share_unpress" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/latShower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="105px"
+            android:fontFamily="@font/poppins_medium"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Latitude"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            map:layout_constraintLeft_toLeftOf="parent"
+            map:layout_constraintTop_toBottomOf="@+id/titleLayout" />
+
+        <TextView
+            android:id="@+id/infoLat"
+            android:layout_width="255px"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="0"
+            android:textColor="@color/project__blue_color"
+            android:textSize="12sp"
+            map:layout_constraintLeft_toLeftOf="@+id/latShower"
+            map:layout_constraintTop_toBottomOf="@+id/latShower" />
+
+        <TextView
+            android:id="@+id/longShower"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginRight="105px"
+            android:gravity="center"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Longitude"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            map:layout_constraintRight_toRightOf="parent"
+            map:layout_constraintTop_toBottomOf="@+id/titleLayout" />
+
+        <TextView
+            android:id="@+id/infoLng"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="0"
+            android:textColor="@color/project__blue_color"
+            android:textSize="12sp"
+            map:layout_constraintLeft_toLeftOf="@+id/longShower"
+            map:layout_constraintRight_toRightOf="@+id/longShower"
+            map:layout_constraintTop_toBottomOf="@+id/longShower" />
+
+        <LinearLayout
+            android:id="@+id/locationLayout"
+            android:layout_width="match_parent"
+            android:layout_height="105px"
+            android:layout_weight="1"
+            android:background="@color/text_bg"
+            android:backgroundTint="@color/ads_appcolor"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintLeft_toLeftOf="parent"
+            map:layout_constraintRight_toRightOf="parent"
+            map:layout_constraintTop_toBottomOf="@+id/infoLat">
+
+            <ImageView
+                android:id="@+id/ic_map_location"
+                android:layout_width="200px"
+                android:layout_height="50px"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:src="@drawable/c_digital_ic_location" />
+
+            <TextView
+                android:id="@+id/userLocation"
+                android:layout_width="500px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_medium"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="1"
+                android:paddingLeft="20dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="Your Location "
+                android:textColor="@color/project__green_color"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/copyButton"
+                android:layout_width="200px"
+                android:layout_height="50px"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:src="@drawable/c_digital_copy_unpress" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/yourLocation"
+        android:layout_width="95px"
+        android:layout_height="95px"
+        android:layout_marginRight="59px"
+        android:layout_marginBottom="29px"
+        android:gravity="center"
+        android:src="@drawable/c_digital_location_unpress"
+        map:layout_constraintBottom_toTopOf="@+id/ZoomIn"
+        map:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/ZoomIn"
+        android:layout_width="95px"
+        android:layout_height="95px"
+        android:layout_marginRight="59px"
+        android:layout_marginBottom="35px"
+        android:gravity="center"
+        android:src="@drawable/c_digital_zoom_in_unpress"
+        map:layout_constraintBottom_toTopOf="@+id/ZoomOut"
+        map:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/ZoomOut"
+        android:layout_width="95px"
+        android:layout_height="95px"
+        android:layout_marginRight="59px"
+        android:layout_marginBottom="507px"
+        android:src="@drawable/c_digital_zoom_out_unpress"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/fliperValue"
+        android:layout_width="153px"
+        android:layout_height="100px"
+        android:scaleType="fitStart"
+        android:src="@drawable/c_digital_up"
+        map:layout_constraintLeft_toLeftOf="parent"
+        map:layout_constraintRight_toRightOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/constraint2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

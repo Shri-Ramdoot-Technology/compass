@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint12Day"
+        android:layout_width="match_parent"
+        android:layout_height="139px"
+        android:layout_marginTop="45px"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/weatherImglis"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/c_digital_sun"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/linear"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toRightOf="@+id/weatherImglis"
+            app:layout_constraintRight_toLeftOf="@+id/linear2"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="51px"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1.5"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="15/03"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/humidityAdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="57px"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="88%"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linear2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toRightOf="@+id/linear"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/minTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center_vertical"
+                android:text="26℃"
+                android:textColor="@color/white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/oblique"
+                android:layout_width="2px"
+                android:layout_height="50px"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/minTemp"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toRightOf="@+id/minTemp"
+                app:layout_constraintRight_toLeftOf="@+id/maxTemp"
+                app:layout_constraintTop_toTopOf="@+id/minTemp" />
+
+            <TextView
+                android:id="@+id/maxTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center_vertical"
+                android:text="29℃"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/minTemp"
+                app:layout_constraintLeft_toRightOf="@+id/oblique"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/minTemp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/DividerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="4px"
+            android:layout_marginTop="27px"
+            android:scaleType="centerCrop"
+            android:src="@drawable/c_digital_devider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

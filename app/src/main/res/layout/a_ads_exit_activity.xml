@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+      android:background="@color/appcolor"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/llmain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:text="Are You Sure To Exit? "
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="40dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cancelbtn"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:background="@drawable/a_install_btn"
+                android:backgroundTint="#8F3F60B5"
+                android:text="Cancel"
+                android:textColor="@color/ads_white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/exitbtn"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:backgroundTint="#8F3F60B5"
+                android:background="@drawable/a_install_btn"
+                android:text="Exit"
+                android:textColor="@color/ads_white" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/banner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center" />
+    </RelativeLayout>
+
+</RelativeLayout>

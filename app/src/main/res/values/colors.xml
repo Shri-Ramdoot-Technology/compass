@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="ads_black">#FF000000</color>
+    <color name="ads_white">#FFFFFFFF</color>
+    <color name="ads_appcolor">#8F3F60B5</color>
+    <color name="appcolor">#00244C</color>
+    <color name="black">#ff000000</color>
+    <color name="main_bg">#000018</color>
+    <color name="project__blue_color">#63fdfa</color>
+    <color name="project__green_color">#65f79f</color>
+    <color name="text_bg">#080e2c</color>
+    <color name="tooltip_background_dark">#e6616161</color>
+    <color name="tooltip_background_light">#e6ffffff</color>
+</resources>
+
+

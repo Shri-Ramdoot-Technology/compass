@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/appcolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <ImageView
+                android:id="@+id/refreshPage"
+                android:layout_width="160px"
+                android:layout_height="160px"
+                android:layout_marginRight="20px"
+                android:src="@drawable/c_digital_state_for_refresh_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:layout_marginRight="10px"
+                android:paddingBottom="40px"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/refreshPage">
+
+                <ImageView
+                    android:id="@+id/sunrise"
+                    android:layout_width="80px"
+                    android:layout_height="55px"
+                    android:layout_marginTop="20px"
+                    android:src="@drawable/c_digital_ic_sunrise"
+                    app:layout_constraintBottom_toBottomOf="@+id/tempShow"
+                    app:layout_constraintBottom_toTopOf="@+id/sunriseHolder"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/tempShow"
+                    app:layout_constraintTop_toTopOf="@+id/tempShow" />
+
+                <TextView
+                    android:id="@+id/sunriseHolder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20px"
+                    android:layout_marginBottom="20px"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="11.37am"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="@+id/sunrise"
+                    app:layout_constraintRight_toRightOf="@+id/sunrise"
+                    app:layout_constraintTop_toBottomOf="@+id/sunrise" />
+
+                <TextView
+                    android:id="@+id/tempShow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200px"
+                    android:layout_marginTop="20px"
+                    android:layout_marginRight="120px"
+                    android:fontFamily="@font/poppins_thin"
+                    android:gravity="center"
+                    android:text="29"
+                    android:textColor="@color/white"
+                    android:textSize="60sp"
+                    app:layout_constraintLeft_toRightOf="@+id/sunrise"
+                    app:layout_constraintRight_toLeftOf="@+id/sunset"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/txt_celsius"
+                    android:layout_width="89px"
+                    android:layout_height="80px"
+                    android:layout_marginLeft="220px"
+                    android:layout_marginBottom="100px"
+                    android:src="@drawable/c_digital_celsisus"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/tempShow"
+                    app:layout_constraintLeft_toLeftOf="@+id/tempShow"
+                    app:layout_constraintRight_toRightOf="@+id/tempShow"
+                    app:layout_constraintTop_toTopOf="@+id/tempShow" />
+
+                <ImageView
+                    android:id="@+id/sunset"
+                    android:layout_width="80px"
+                    android:layout_height="55px"
+                    android:layout_marginTop="20px"
+                    android:src="@drawable/c_digital_ic_sunset"
+                    app:layout_constraintBottom_toBottomOf="@+id/tempShow"
+                    app:layout_constraintBottom_toTopOf="@+id/sunsetHolder"
+                    app:layout_constraintLeft_toRightOf="@+id/tempShow"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tempShow" />
+
+                <TextView
+                    android:id="@+id/sunsetHolder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20px"
+                    android:layout_marginBottom="20px"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="6.43pm"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/sunset"
+                    app:layout_constraintStart_toStartOf="@+id/sunset"
+                    app:layout_constraintTop_toBottomOf="@+id/sunrise" />
+
+                <ImageView
+                    android:id="@+id/wind"
+                    android:layout_width="80px"
+                    android:layout_height="80px"
+                    android:layout_marginTop="40px"
+                    android:src="@drawable/c_digital_ic_wind"
+                    app:layout_constraintLeft_toLeftOf="@+id/sunriseHolder"
+                    app:layout_constraintTop_toBottomOf="@+id/tempShow" />
+
+                <ImageView
+                    android:id="@+id/humidity"
+                    android:layout_width="80px"
+                    android:layout_height="80px"
+                    android:layout_marginLeft="43px"
+                    android:layout_marginTop="40px"
+                    android:src="@drawable/c_digital_ic_humidity"
+                    app:layout_constraintLeft_toRightOf="@+id/wind"
+                    app:layout_constraintRight_toLeftOf="@+id/visibility"
+                    app:layout_constraintTop_toBottomOf="@+id/tempShow" />
+
+                <ImageView
+                    android:id="@+id/visibility"
+                    android:layout_width="80px"
+                    android:layout_height="80px"
+                    android:layout_marginLeft="43px"
+                    android:layout_marginTop="40px"
+                    android:src="@drawable/c_digital_visibility"
+                    app:layout_constraintLeft_toRightOf="@+id/humidity"
+                    app:layout_constraintRight_toLeftOf="@+id/pressure"
+                    app:layout_constraintTop_toBottomOf="@+id/tempShow" />
+
+                <ImageView
+                    android:id="@+id/pressure"
+                    android:layout_width="80px"
+                    android:layout_height="80px"
+                    android:layout_marginLeft="43px"
+                    android:layout_marginTop="40px"
+                    android:src="@drawable/c_digital_ic_pressure"
+                    app:layout_constraintLeft_toRightOf="@+id/visibility"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tempShow" />
+
+                <TextView
+                    android:id="@+id/windAns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="7km/h"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@+id/wind"
+                    app:layout_constraintTop_toBottomOf="@+id/wind" />
+
+                <TextView
+                    android:id="@+id/humidityAns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="77.0%"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/humidity"
+                    app:layout_constraintStart_toStartOf="@+id/humidity"
+                    app:layout_constraintTop_toBottomOf="@+id/humidity" />
+
+                <TextView
+                    android:id="@+id/visibilityAns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="16km"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/visibility"
+                    app:layout_constraintStart_toStartOf="@+id/visibility"
+                    app:layout_constraintTop_toBottomOf="@+id/visibility" />
+
+                <TextView
+                    android:id="@+id/pressureAns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="1007.2 mb"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/pressure"
+                    app:layout_constraintStart_toStartOf="@+id/pressure"
+                    app:layout_constraintTop_toBottomOf="@+id/pressure" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint2"
+                android:layout_width="1031px"
+                android:layout_height="426px"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/c_digital_box1"
+                android:backgroundTint="@color/ads_appcolor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraint1">
+
+                <TextView
+                    android:id="@+id/weatherDes1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="59px"
+                    android:layout_marginTop="39px"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="clear sky"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/currentTime"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/currentTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="59px"
+                    android:layout_marginTop="39px"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="2021-03-16 "
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toRightOf="@+id/weatherDes1"
+                    app:layout_constraintRight_toLeftOf="@+id/hours48"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/hours48"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="59px"
+                    android:layout_marginTop="39px"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Next 12 hours "
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toRightOf="@+id/currentTime"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="328px"
+                    android:layout_marginTop="20px"
+                    android:paddingLeft="50px"
+                    android:scrollbars="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/weatherDes1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint12Day"
+                android:layout_width="1031px"
+                android:layout_height="557px"
+                android:layout_marginTop="20px"
+                android:visibility="gone"
+                android:layout_marginBottom="31px"
+                android:background="@drawable/box2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraint2">
+
+                <TextView
+                    android:id="@+id/day7title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20px"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="Next 16 Days"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/day7title" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
