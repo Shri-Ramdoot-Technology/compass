@@ -1,201 +1,323 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2A2C3B"
-   >
+    android:background="#2A2C3B">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#2A2C3B"
-        >
+        android:background="#2A2C3B">
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="-40dp"
             android:src="@drawable/crop_shape"
-        />
+
+            />
+
+        <RelativeLayout
+            android:id="@+id/compassBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+            <RelativeLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp">
+
+                <ImageView
+                    android:id="@+id/img_stable_cmt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/compass_rotator" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/compass_target" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/degreeDisplay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:text="348"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="شمال غرب"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+           android:layout_below="@+id/compassBox"
+            android:layout_marginTop="120dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:gravity="center"
+                android:text="1\n2"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="شمال غرب"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+           android:layout_marginTop="120dp"
+            android:layout_marginEnd="@dimen/_10sdp"
+           android:layout_below="@id/compassBox"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/latHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lngHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="الحالي"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
     </RelativeLayout>
 
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="الأرتفاع"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableEnd="@drawable/icon_altitude"
+            android:gravity="center"
+            android:paddingStart="@dimen/_10sdp"
+            android:text="480"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="السرعة"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/distanceToMTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="السرعة"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/icon_speed"
+            android:gravity="center"
+            android:paddingEnd="@dimen/_10sdp"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:id="@+id/bottomLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="-20dp"
+            android:background="@drawable/btn_sendsmssend_bg"
+            android:gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottomLine">
+
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        >
+        android:layout_alignTop="@+id/constraintLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text"
+              android:layout_marginTop="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="إرسال الموقع"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="14sp"
+
+            />
 
         <ImageView
+            android:id="@+id/shareImg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:src="@drawable/compass_rotator"
-            />
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/compass_target"
-            android:layout_centerInParent="true"
-            />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:orientation="vertical"
-            >
-            <TextView
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="348"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:textSize="14sp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Xyz Solution"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:textSize="12sp"/>
-        </LinearLayout>
-    </RelativeLayout>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="@dimen/_80sdp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:gravity="center"
-
-        android:orientation="vertical">
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Speed"
-
-            android:textColor="@color/white"
-            />
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="480"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:drawableEnd="@drawable/icon_altitude"
-            android:paddingStart="@dimen/_10sdp"
-            android:textStyle="bold"
-            />
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="@dimen/_80sdp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_alignParentEnd="true"
-        android:gravity="center"
-        android:orientation="vertical">
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Speed"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textColor="@color/white"
-            />
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="1"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:paddingEnd="@dimen/_10sdp"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:drawableStart="@drawable/icon_speed"
-            android:textStyle="bold"
-            />
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="@dimen/_80sdp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/_20sdp"
-        android:gravity="center"
+            android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
-        android:orientation="vertical">
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="1\n2"
-
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textStyle="bold"
-            />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Destination Location"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textStyle="bold"
-            />
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:src="@drawable/icon_sms" />
 
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="@dimen/_80sdp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:orientation="vertical">
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="1\n2"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textStyle="bold"
-            />
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Current Location"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-          android:textStyle="bold"
-            />
-
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-
+    </RelativeLayout>
 
 </RelativeLayout>
